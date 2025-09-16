@@ -14,8 +14,9 @@
   <div class="logo">
     <img src="logo-dark-brown.png" alt="Health in the Margins logo">
   </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   <nav>
-    <ul>
+    <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="who-we-are.html">Who We Are</a></li>
       <li><a href="what-we-do.html">What We Do</a></li>
@@ -32,6 +33,14 @@
   <h2>Our Mission</h2>
   <p>Striving towards epistemic justice, our mission is to centre the voices, values and healing traditions of frontline communities to advance health equity.</p>
 
+  <!-- Vertical menu buttons below the main text -->
+  <div class="vertical-menu">
+    <a href="who-we-are.html">Who We Are</a>
+    <a href="what-we-do.html">What We Do</a>
+    <a href="join-us.html">Join Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
   <div class="cta">
     <p>Connect with us:<br>
       <a href="mailto:connect@healthinthemargins.org">connect@healthinthemargins.org</a> |
@@ -43,6 +52,12 @@
 <footer>
   &copy; 2025 Health in the Margins. All rights reserved.
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('show');
+}
+</script>
 
 </body>
 </html>

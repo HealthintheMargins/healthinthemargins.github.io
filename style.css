@@ -22,6 +22,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 header .logo img {
@@ -46,6 +47,36 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Hamburger icon hidden by default */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive nav for small screens */
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
+
 main {
   padding: 2rem;
   max-width: 900px;
@@ -68,6 +99,27 @@ h1, h2 {
 .cta a {
   color: #fff;
   text-decoration: underline;
+}
+
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.vertical-menu a {
+  background-color: var(--color-green);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.vertical-menu a:hover {
+  background-color: var(--color-secondary);
 }
 
 footer {
