@@ -91,7 +91,7 @@ header nav ul li a:hover {
 }
 
 main {
-  padding: 2rem;
+  padding: 1rem;
   max-width: 900px;
   margin: auto;
 }
@@ -228,7 +228,7 @@ footer {
   position: relative;
   background: url('header_kathy.png') no-repeat center center;
   background-size: cover;
-  color: #7e3a2be1;
+  /*background-color: #7e3a2be1;*/
   text-align: center;
   padding: 6rem 2rem;
 }
@@ -297,6 +297,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
