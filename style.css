@@ -224,7 +224,7 @@ footer {
 /* Hero section */
 .hero {
   position: relative;
-  background: url('hero.jpg') no-repeat center center;
+  background: url('post 1.png') no-repeat center center;
   background-size: cover;
   color: white;
   text-align: center;
@@ -288,6 +288,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
