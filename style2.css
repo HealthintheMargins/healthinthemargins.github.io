@@ -105,7 +105,7 @@ h1, h2 {
 }
 
 .cta {
-  background: var(--color-secondary);
+  background: var(--color-black);
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -360,6 +360,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
