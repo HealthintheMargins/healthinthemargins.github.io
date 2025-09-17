@@ -17,9 +17,9 @@ body {
 }
 
 header {
-  background: url('header.jpg') no-repeat center center;
+  background: url('header_title.jpg') no-repeat center center;
   background-size: cover;
-  color: white;
+  color: var(--color-primary);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -161,6 +161,7 @@ footer {
     color: white;
   }
 }
+
 
 
 
