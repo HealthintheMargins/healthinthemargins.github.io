@@ -251,7 +251,7 @@ footer {
 
 /* Three-column section */
 .features {
-  max-width: 300px;               /* same width as main and carousel */
+  max-width: 250px;               /* same width as main and carousel */
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -325,6 +325,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
