@@ -228,7 +228,7 @@ footer {
   position: relative;
   background: url('header_kathy.png') no-repeat center center;
   background-size: contain; /* show full image */
-  background-color:  url('header_kathy_background.png') no-repeat center center;
+  background-color: #7e3a2be1;
   text-align: center;
   padding: 1rem;
 }
@@ -265,7 +265,7 @@ footer {
   position: relative;
   background: url('tag_line_kathy.png') no-repeat center center;
   background-size: contain; /* show full image */
-  background-color: var(--color-secondary);
+  background-color: var(--color-black);
   text-align: center;
 
 }
@@ -297,6 +297,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
