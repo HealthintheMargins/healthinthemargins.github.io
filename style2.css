@@ -237,14 +237,17 @@ footer {
 }
 
 /*Tag line section */
-.tag {
+.tag  {
   position: relative;
-  background: url('tag_line_kathy.png') no-repeat center center;
-  background-size: contain
-  text-align: center;
-  padding: 6rem 2rem;
+  width: 100%;
+  overflow: hidden;
 }
 
+.tag-img {
+  width: 100%;
+  height: auto;         /* preserve aspect ratio */
+  display: block;
+}
 /* Three-column section */
 .features {
   display: grid;
@@ -272,6 +275,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
