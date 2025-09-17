@@ -249,25 +249,25 @@ footer {
   display: block;
 }
 
-/* Three-column section 
+ Three-column section 
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .feature {
   display: block;
   overflow: hidden;
   background: #fff;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0.5rem;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  aspect-ratio: 16 / 9; /* same as carousel */
-} */
-
-/*blocks/ flex*/
+  /*aspect-ratio: 16 / 9; /* same as carousel */
+} 
+/*
+blocks/ flex
 .feature {
   position: relative;
   width: 100%;
@@ -279,7 +279,8 @@ footer {
   border-radius: 8px;
   object-fit: contain
   display: block;
-}
+}*/
+
 
 
 
