@@ -251,8 +251,8 @@ footer {
 
 /* Three-column section */
 .features {
-  max-width: 250px;               /* same width as main and carousel */
-  margin: 1rem auto;
+  max-width: 900px;               /* same width as main and carousel */
+  margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
@@ -264,7 +264,7 @@ footer {
   overflow: hidden;               /* crop overflow */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
- /* aspect-ratio: 16 / 9;             force same ratio as carousel */
+  aspect-ratio: 16 / 9;            /* force same ratio as carousel */
   background: #fff;               /* white box behind image */
 }
 
@@ -274,10 +274,11 @@ footer {
 
 .feature img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;              /* fill box, crop if needed */
   display: block;
 }
+
 
 /*.features {
   display: grid;
@@ -325,6 +326,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
