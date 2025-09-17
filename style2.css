@@ -294,7 +294,7 @@ footer {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   /*aspect-ratio: 16 / 9; /* same as carousel */
-} 
+/*} 
 .feature:hover {
   transform: scale(1.03);
 }
@@ -304,8 +304,8 @@ footer {
   height: 33%;
   object-fit:contain */
   
-/* ??????
-.feature img {
+/* ??????*/
+/*.feature img {
   display: block;
   width: 100%;
   height: auto;
@@ -325,6 +325,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
