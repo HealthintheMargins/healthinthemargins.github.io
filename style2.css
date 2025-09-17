@@ -251,25 +251,15 @@ footer {
 
 /* Three-column section */
 .features {
-  max-width: 900px;               /* same width as main and carousel */
+  max-width: 900px;                /* centre on page */
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.features {
-  max-width: 900px;                          /* same as main */
-  margin: 2rem auto;
-  display: flex;                             /* use flex instead of grid */
-  justify-content: space-between;            /* spread them evenly */
-  gap: 1rem;                                 /* small gap between cards */
-  flex-wrap: wrap;                           /* allow wrap on very small screens */
+  grid-template-columns: repeat(3, 1fr);  /* exactly three columns */
+  gap: 1rem;                        /* space between */
 }
 
 .feature {
   display: block;
-  flex: 1 1 30%;                             /* roughly one third each */
-  max-width: 280px;                          /* never exceed 280px wide */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -283,9 +273,18 @@ footer {
 
 .feature img {
   width: 100%;
-  height: auto;
+  height: 180px;          /* fixed height */
+  object-fit: cover;      /* crop to fill */
   display: block;
 }
+
+/* On small screens, allow them to stack nicely */
+@media (max-width: 600px) {
+  .features {
+    grid-template-columns: 1fr;    /* one per row on phones */
+  }
+}
+
 
 /*KINDA WORKS
 .feature {
@@ -357,6 +356,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
