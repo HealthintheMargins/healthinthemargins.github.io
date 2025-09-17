@@ -16,18 +16,19 @@ main img:first-child {
   --color-green: #6A715A;
   --color-neutral-light: #F8F9F6;
   --color-neutral-dark: #222222;
+  --color-black:#000000FF
 }
 
 body {
   font-family:  'Inter', sans-serif;
   margin: 0;
-  background-color: var(--color-neutral-light);
+  background-color: var(--color-black);
   color: var(--color-neutral-dark);
   line-height: 1.6;
 }
 
 header {
-  Background-color: var(--color-primary);
+  Background-color: var(--color-black);
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -225,7 +226,7 @@ footer {
 /* Hero section */
 .hero {
   position: relative;
-  background: url('post 1.png') no-repeat center center;
+  background: url('header_logo_black.png') no-repeat center center;
   background-size: cover;
   color:  var(--color-neutral-light);
   text-align: center;
@@ -281,6 +282,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
