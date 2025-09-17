@@ -20,7 +20,7 @@ main img:first-child {
 body {
   font-family:  'Inter', sans-serif;
   margin: 0;
-  background-color: var(color-neutral-dark);
+  background: url('dark_background.png') no repeat center center;
   color: var(--color-neutral-dark);
   line-height: 1.6;
 }
@@ -170,6 +170,7 @@ footer {
     color: white;
   }
 }
+
 
 
 
