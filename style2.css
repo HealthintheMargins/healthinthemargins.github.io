@@ -269,12 +269,18 @@ footer {
 .feature:hover {
   transform: scale(1.03);
 }
-
+.feature img {
+  display: block;
+  width: 33%;
+  height: 33%;
+  object-fit:contain
+  
+/* ??????
 .feature img {
   display: block;
   width: 100%;
   height: auto;
-}
+} */
 
 /* blocks/ flex 
 .feature {
@@ -290,6 +296,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
