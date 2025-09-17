@@ -227,8 +227,8 @@ footer {
 .hero {
   position: relative;
   background: url('header_kathy.png') no-repeat center center;
-  background-size: cover;
-  color:  var(--color-neutral-light);
+  background-size: contain; /* show full image */
+  background-color:  url('header_kathy_background.png');header_kathy_background
   text-align: center;
   padding: 6rem 2rem;
 }
@@ -287,6 +287,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
