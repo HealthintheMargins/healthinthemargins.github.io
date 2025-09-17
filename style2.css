@@ -228,9 +228,9 @@ footer {
   position: relative;
   background: url('header_kathy.png') no-repeat center center;
   background-size: cover;
-  background-color: #7e3a2be1;
+  color: #7e3a2be1;
   text-align: center;
-  padding: 1rem;
+  padding: 6rem 2rem;
 }
 .hero::before {
   content:none;
@@ -267,7 +267,7 @@ footer {
   background-size: cover;
   background-color: var(--color-black);
   text-align: center;
-
+  padding: 6rem 2rem;
 }
 
 /* Three-column section */
@@ -297,6 +297,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
