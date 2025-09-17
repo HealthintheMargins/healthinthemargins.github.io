@@ -173,7 +173,7 @@ footer {
 
 /* Carousel styles */
 .carousel-container {
-  max-width: 900px;
+  max-width: 100%;
   position: relative;
   margin: 2rem auto;
 }
@@ -220,6 +220,7 @@ footer {
 .dot:hover {
   background-color: #717171;
 }
+
 
 
 
