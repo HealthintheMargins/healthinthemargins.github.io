@@ -10,13 +10,15 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
+  background: url ('body.jpg') no-repeat center center fixed;
   background-color: var(--color-neutral-light);
   color: var(--color-neutral-dark);
   line-height: 1.6;
 }
 
 header {
-  background-color: url ('header.png') no-repeat center center fixed;
+  background: url('header.jpg') no-repeat center center;
+  background-size: cover;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -159,5 +161,6 @@ footer {
     color: white;
   }
 }
+
 
 
