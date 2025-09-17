@@ -257,7 +257,37 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
+.features {
+  max-width: 900px;                          /* same as main */
+  margin: 2rem auto;
+  display: flex;                             /* use flex instead of grid */
+  justify-content: space-between;            /* spread them evenly */
+  gap: 1rem;                                 /* small gap between cards */
+  flex-wrap: wrap;                           /* allow wrap on very small screens */
+}
 
+.feature {
+  display: block;
+  flex: 1 1 30%;                             /* roughly one third each */
+  max-width: 280px;                          /* never exceed 280px wide */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.03);
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*KINDA WORKS
 .feature {
   display: block;                 /* anchor behaves like block */
   border-radius: 8px;
@@ -278,9 +308,10 @@ footer {
   object-fit: cover;              /* fill box, crop if needed */
   display: block;
 }
+*/
 
-
-/*.features {
+/*OLD- DOESN@T SEEM TO WORK
+.features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
@@ -326,6 +357,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
