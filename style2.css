@@ -289,13 +289,13 @@ footer {
 
 /*KINDA WORKS
 .feature {
-  display: block;                 /* anchor behaves like block */
+  display: block;             
   border-radius: 8px;
-  overflow: hidden;               /* crop overflow */
+  overflow: hidden;           
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-  aspect-ratio: 16 / 9;            /* force same ratio as carousel */
-  background: #fff;               /* white box behind image */
+  aspect-ratio: 16 / 9;           
+  background: #fff;              
 }
 
 .feature:hover {
@@ -305,7 +305,7 @@ footer {
 .feature img {
   width: 100%;
   height: 100%;
-  object-fit: cover;              /* fill box, crop if needed */
+  object-fit: cover;             
   display: block;
 }
 */
@@ -357,6 +357,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
