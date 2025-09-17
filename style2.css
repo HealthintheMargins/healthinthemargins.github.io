@@ -228,9 +228,9 @@ footer {
   position: relative;
   background: url('header_kathy.png') no-repeat center center;
   background-size: contain; /* show full image */
-  background-color:  url('header_kathy_background.png');header_kathy_background
+  background-color:  url('header_kathy_background.png') no-repeat center center;
   text-align: center;
-
+  padding: 1rem;
 }
 .hero::before {
   content:none;
@@ -260,6 +260,16 @@ footer {
   background: var(--color-accent);
 }
 
+/*Tag line section */
+.tag {
+  position: relative;
+  background: url('tag_line_kathy.png') no-repeat center center;
+  background-size: contain; /* show full image */
+  background-color: var(--color-secondary);
+  text-align: center;
+
+}
+
 /* Three-column section */
 .features {
   display: grid;
@@ -287,6 +297,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
