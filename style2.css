@@ -227,7 +227,7 @@ footer {
 .hero {
   position: relative;
   background: url('header_kathy.png') no-repeat center center;
-  background-size: contain; /* show full image */
+  background-size: cover;
   background-color: #7e3a2be1;
   text-align: center;
   padding: 1rem;
@@ -264,7 +264,7 @@ footer {
 .tag {
   position: relative;
   background: url('tag_line_kathy.png') no-repeat center center;
-  background-size: contain; /* show full image */
+  background-size: cover;
   background-color: var(--color-black);
   text-align: center;
 
@@ -297,6 +297,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
