@@ -27,7 +27,7 @@ header {
 }
 
 header .logo img {
-  max-height: 200px;
+  max-height: 50px;
 }
 
 header nav ul {
@@ -160,6 +160,7 @@ footer {
     color: white;
   }
 }
+
 
 
 
