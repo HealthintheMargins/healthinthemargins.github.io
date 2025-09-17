@@ -1,3 +1,13 @@
+/* Reset default body margin */
+body {
+  margin: 0;
+  padding: 0;
+}
+main img:first-child {
+  display: block;        /* removes bottom whitespace from inline images */
+  margin-top: 0;         /* no top margin */
+  padding-top: 0;        /* no top padding */
+}
 :root {
   --color-primary: #4E0C0B;
   --color-accent: #E2C88C;
@@ -160,6 +170,7 @@ footer {
     color: white;
   }
 }
+
 
 
 
