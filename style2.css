@@ -14,7 +14,7 @@ main img:first-child {
   --color-accent: #E2C88C;
   --color-secondary: #C96C3E;
   --color-green: #6A715A;
-  --color-neutral-light: #F8F9F6;
+  --color-neutral-light: #efdaa9ff;
   --color-neutral-dark: #222222;
   --color-black:#000000FF
 }
@@ -254,7 +254,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
+
 }
 .feature {
   display: block;
@@ -296,6 +296,7 @@ footer {
   display: block;
 }
 */
+
 
 
 
