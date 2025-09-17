@@ -265,7 +265,7 @@ footer {
   position: relative;
   background: url('tag_line_kathy.png') no-repeat center center;
   background-size: cover;
-  background-color: var(--color-black);
+  /*background-color: var(--color-black);*/
   text-align: center;
   padding: 6rem 2rem;
 }
@@ -297,6 +297,7 @@ footer {
   margin-top: 0;
   color: var(--color-primary);
 }
+
 
 
 
