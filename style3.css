@@ -1,0 +1,428 @@
+
+/* Reset default body margin */
+body {
+  margin: 0;
+  padding: 0;
+}
+main img:first-child {
+  display: block;        /* removes bottom whitespace from inline images */
+  margin-top: 0;         /* no top margin */
+  padding-top: 0;        /* no top padding */
+}
+:root {
+  --color-primary: #4E0C0B;
+  --color-accent: #E2C88C;
+  --color-secondary: #C96C3E;
+  --color-green: #6A715A;
+  --color-neutral-light: #efdaa9ff;
+  --color-neutral-dark: #222222;
+  --color-black:#000000FF
+}
+
+body {
+  font-family:  'Inter', sans-serif;
+  margin: 0;
+  background-color: var(--color-black);
+  color: var(--color-neutral-dark);
+  line-height: 1.6;
+}
+
+header {
+  Background-color: var(--color-black);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10; /* make header stack above body */
+}
+
+header .logo img {
+  max-height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; 
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 20; /* make dropdown menu above header background */
+}
+
+header nav ul li a {
+  color: var(--color-neutral-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger icon hidden by default */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive nav for small screens */
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-black);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+   z-index: 999; /* super-high so it’s above everything */
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: var(--color-primary);
+}
+
+.cta {
+  background: var(--color-black);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.cta a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.vertical-menu a {
+  background-color: var(--color-green);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.vertical-menu a:hover {
+  background-color: var(--color-secondary);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 70px; /* below header */
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
+
+/* Carousel styles */
+.carousel-container {
+  max-width: 100%;
+  position: relative;
+  margin: 2rem auto;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Fade effect */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Dots below carousel */
+.carousel-dots {
+  text-align: center;
+  position: relative;
+  top: -30px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active-dot,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;         /* preserve aspect ratio */
+  display: block;
+}
+
+/*Tag line section */
+.tag  {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tag-img {
+  width: 100%;
+  height: auto;         /* preserve aspect ratio */
+  display: block;
+}
+
+/* Three-column section */
+.features {
+  max-width: 900px;                /* centre on page */
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* exactly three columns */
+  gap: 1rem;                        /* space between */
+}
+
+.feature {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.03);
+}
+
+.feature img {
+  width: 100%;
+  height: 100px;          /* fixed height */
+  object-fit: cover;      /* crop to fill */
+  display: block;
+}
+
+/* On small screens, allow them to stack nicely 
+@media (max-width: 600px) {
+  .features {
+    grid-template-columns: 1fr;    /* one per row on phones */
+  }
+}
+
+
+/*KINDA WORKS
+.feature {
+  display: block;             
+  border-radius: 8px;
+  overflow: hidden;           
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  aspect-ratio: 16 / 9;           
+  background: #fff;              
+}
+
+.feature:hover {
+  transform: scale(1.03);
+}
+
+.feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             
+  display: block;
+}
+*/
+
+/*OLD- DOESN@T SEEM TO WORK
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+
+}
+.feature {
+  display: block;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  /*aspect-ratio: 16 / 9; /* same as carousel */
+/*} 
+.feature:hover {
+  transform: scale(1.03);
+}
+.feature img {
+  display: block;
+  width: 33%;
+  height: 33%;
+  object-fit:contain */
+  
+/* ??????*/
+/*.feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+
+/* blocks/ flex 
+.feature {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.feature img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: contain
+  display: block;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
