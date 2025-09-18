@@ -282,84 +282,27 @@ footer {
   display: block;
 }
 
-/* On small screens, allow them to stack nicely 
-@media (max-width: 600px) {
-  .features {
-    grid-template-columns: 1fr;    /* one per row on phones */
-  }
-}
-
-
-/*KINDA WORKS
-.feature {
-  display: block;             
-  border-radius: 8px;
-  overflow: hidden;           
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  aspect-ratio: 16 / 9;           
-  background: #fff;              
-}
-
-.feature:hover {
-  transform: scale(1.03);
-}
-
-.feature img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;             
-  display: block;
-}
-*/
-
-/*OLD- DOESN@T SEEM TO WORK
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-
-}
-.feature {
-  display: block;
+.visually-hidden {
+  position: absolute;
+  left: -9999px; /* moves it off screen */
+  width: 1px;
+  height: 1px;
   overflow: hidden;
-  background: #fff;
-  border-radius: 8px;
-  padding: 0.5rem;
+}
+.intro {
+  max-width: 700px;
+  margin: 2rem auto;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  /*aspect-ratio: 16 / 9; /* same as carousel */
-/*} 
-.feature:hover {
-  transform: scale(1.03);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-neutral-light);
 }
-.feature img {
-  display: block;
-  width: 33%;
-  height: 33%;
-  object-fit:contain */
-  
-/* ??????*/
-/*.feature img {
-  display: block;
-  width: 100%;
-  height: auto;
-} */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-/* blocks/ flex 
-.feature {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-.feature img {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  object-fit: contain
-  display: block;
-}
-*/
 
 
 
