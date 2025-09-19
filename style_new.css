@@ -440,8 +440,11 @@ form textarea {
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-image: url('gold.png');  /* default overlay */
-  background-size: cover;
-  background-position: center;
+/*  background-size: cover; */
+/*  background-position: center; */
+    background-repeat: repeat;         /* tile the image */
+    background-size: auto;             /* keep natural size */
+    background-position: top left;     /* start tiling from top-left */
   opacity: 0.8;                       /* 50% opacity overlay */
   z-index: 0;
 }
