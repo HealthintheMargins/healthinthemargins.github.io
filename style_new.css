@@ -425,6 +425,35 @@ footer {
 }
 
 
+.page-hero-light {
+  position: relative;
+  color: var(--color-neutral-light);
+  text-align: center;
+  padding: 5rem 1rem;
+  overflow: hidden;
+}
+
+/* One background image for all hero sections */
+.page-hero-light::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('dark-background.png'); /* one file for all pages */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;                /* adjust for subtlety */
+  z-index: 0;
+}
+
+/* Put text above image */
+.page-hero-light h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Haettenschweiler','Arial Narrow Bold',sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
 
 
 
