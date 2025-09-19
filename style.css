@@ -258,28 +258,21 @@ footer {
   background: var(--color-accent);
 }
 
-/* Three-column section */
+
+/* Features */
 .features {
+  max-width: 900px;                /* centre on page */
+  margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-.feature {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .feature img {
-  max-height: 60px;
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 100px;          /* fixed height */
+  object-fit: cover;      /* crop to fill */
+  display: block;
 }
-.feature h3 {
-  margin-top: 0;
-  color: var(--color-primary);
-}
+
+
 
 
 
