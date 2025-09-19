@@ -262,6 +262,7 @@ footer {
 .features {
   max-width: 900px;                /* centre on page */
   margin: 2rem auto;
+  border-radius: 8px;
   display: grid;
 }
 .feature img {
@@ -270,6 +271,7 @@ footer {
   object-fit: cover;      /* crop to fill */
   display: block;
 }
+
 
 
 
