@@ -417,7 +417,7 @@ footer {
 }
 
 .info-what::before {
-  background-image: url('green');
+  background-image: url('green.png');
 }
 
 .info-join::before {
