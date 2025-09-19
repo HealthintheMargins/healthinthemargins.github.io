@@ -84,7 +84,7 @@ header nav ul li a:hover {
 
   .menu-toggle {
     display: block;
-    color: white;
+    color: var(--color-neutral-light);
   }
 }
 
@@ -100,7 +100,7 @@ h1, h2 {
 
 .cta {
   background: var(--color-secondary);
-  color: #fff;
+  color: var(--color-neutral-light);
   padding: 1rem;
   text-align: center;
   border-radius: 8px;
@@ -108,7 +108,7 @@ h1, h2 {
 }
 
 .cta a {
-  color: #fff;
+  color:var(--color-neutral-light);
   text-decoration: underline;
 }
 
@@ -138,8 +138,7 @@ footer {
   padding: 2rem;
   font-size: 0.9rem;
   color: #555;
-  border-top: 1px solid #ddd;
-  background: #fff;
+  background: var(--color-neutral-light);
 }
 
 /* Mobile Menu */
@@ -271,6 +270,7 @@ footer {
   object-fit: cover;      /* crop to fill */
   display: block;
 }
+
 
 
 
