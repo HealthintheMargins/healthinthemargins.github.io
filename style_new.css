@@ -468,6 +468,67 @@ form textarea {
 }
 
 
+/* ============================= */
+/* UNIFY STYLES ACROSS ALL PAGES */
+/* ============================= */
+
+/* 1. Constrain content width for readability */
+.page-content-light,
+.intro,
+.container {
+  max-width: 800px; /* narrower for comfortable reading */
+  margin: 3rem auto;
+}
+
+/* 2. Standardize hero & content spacing */
+.page-hero-light {
+  padding: 3rem 1rem; /* consistent breathing room */
+}
+
+.page-content-light {
+  margin: 3rem auto; /* consistent gap below hero */
+  padding: 2rem;     /* extra interior padding */
+}
+
+/* 3. Responsive heading sizes for harmony */
+.page-hero-light h1 {
+  font-size: 2rem; /* default */
+}
+
+@media (min-width: 768px) {
+  .page-hero-light h1 {
+    font-size: 2.5rem; /* mid screen */
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-hero-light h1 {
+    font-size: 3rem; /* max on large screens */
+  }
+}
+
+.page-content-light h2 {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 4. Softer info panels */
+.info-panel {
+  background: rgba(255, 255, 255, 0.8); /* 80% opacity */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 2rem;
+}
+
+/* 5. Consistent overlay opacity */
+.page-hero-light::before {
+  opacity: 0.4; /* slightly stronger for contrast */
+}
+
+.page-content-light::before {
+  opacity: 0.5; /* unify content overlays */
+}
 
 
 
