@@ -307,6 +307,7 @@ footer {
 .survey-feature {
   width: 100%;               /* take full width on small screens */
   max-width: 900px;          /* cap width on large screens */
+  height: 200px;              
   margin: 2rem auto;         /* center horizontally with auto margins */
   text-align: center;        /* center child elements */
   padding: 1rem;             /* optional padding */
@@ -315,7 +316,7 @@ footer {
 .survey-feature img {
   display: inline-block;     /* behaves like a block inside the centered text */
   max-width: 100%;           /* scales down on small screens */
-  height: auto;              /* keep aspect ratio */
+  height: 200px;              
   border-radius: 8px;        /* optional rounded corners */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
@@ -324,6 +325,7 @@ footer {
 .survey-feature img:hover {
   transform: scale(1.03);
 }
+
 
 
 
