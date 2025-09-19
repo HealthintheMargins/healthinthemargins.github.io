@@ -416,6 +416,40 @@ form textarea {
   font-size: 2.5rem;
   margin: 0;
 }
+/* Adding colour in content*/
+
+/* Overlay PNG (default) */
+.page-content-light::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('gold.png');  /* change per page if needed */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;                       /* 50% opacity overlay */
+  z-index: 0;                         /* sit behind text */
+}
+
+/* Make all inner text sit above overlay */
+.page-content-light h2,
+.page-content-light p,
+.page-content-light .info-panel {
+  position: relative;
+  z-index: 1;
+
+  /* Per-page overlays */
+.page-content-light.page-who::before {
+  background-image: url('gold.png');
+}
+
+.page-content-light.page-what::before {
+  background-image: url('green.png');
+}
+
+.page-content-light.page-join::before {
+  background-image: url('red.png');
+}
 
 
 
