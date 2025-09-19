@@ -348,7 +348,7 @@ form textarea {
 .page-content-light {
   background-color: var(--color-neutral-light);
 /*  background-image: url('gold.png');*/
-  max-width: 900px;
+  max-width: 700px;
   margin: 2rem auto;
   padding: 1rem;
   border-radius: 8px;
