@@ -297,6 +297,10 @@ footer {
   padding-top: 0;     /* kill top padding if any */
 }
 
+.text-panel {
+  background: url('gold.png') no-repeat center center;
+  background-size: cover;
+}
 
 
 
