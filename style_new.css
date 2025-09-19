@@ -325,6 +325,9 @@ footer {
 .survey-feature img:hover {
   transform: scale(1.03);
 }
+form textarea {
+  width: 100%;
+}
 
 /* Light page hero */
 .page-hero-light {
