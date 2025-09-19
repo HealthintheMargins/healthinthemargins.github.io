@@ -274,10 +274,11 @@ footer {
   padding-top: 0;     /* kill top padding if any */
 }
 
-.text-panel {
+.text-panel-who {
   background: url('gold.png') no-repeat center center;
   background-size: cover;
 }
+
 
 
 
