@@ -68,6 +68,20 @@
   <footer>
     <p>&copy; 2024 Health in the Margins. All Rights Reserved.</p>
   </footer>
+<script>
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      const answer = button.nextElementSibling;
+
+      if (button.classList.contains("active")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = 0;
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
