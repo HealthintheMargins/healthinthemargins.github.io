@@ -387,7 +387,7 @@ form textarea {
 /* Trying to be fancy */
 .info-panel {
   position: relative;
-  background: #fff;            /* fallback if image fails */
+  background:rgba(255, 255, 255, 0.8)        /* fallback if image fails */
   border-radius: 8px;
   padding: 2rem;
   margin-bottom: 2rem;
