@@ -419,16 +419,31 @@ form textarea {
 /* Adding colour in content*/
 
 /* Overlay PNG (default) */
+/* Light page content base */
+.page-content-light {
+  position: relative;                     /* needed for overlay */
+  background-color: var(--color-neutral-light); /* base beige color */
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--color-neutral-dark);
+  line-height: 1.6;
+  overflow: hidden;                       /* clip overlay inside corners */
+  z-index: 0;
+}
+
+/* Default overlay PNG */
 .page-content-light::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url('gold.png');  /* change per page if needed */
+  background-image: url('gold.png');  /* default overlay */
   background-size: cover;
   background-position: center;
   opacity: 0.5;                       /* 50% opacity overlay */
-  z-index: 0;                         /* sit behind text */
+  z-index: 0;
 }
 
 /* Make all inner text sit above overlay */
@@ -437,8 +452,9 @@ form textarea {
 .page-content-light .info-panel {
   position: relative;
   z-index: 1;
+}
 
-  /* Per-page overlays */
+/* Per-page overlays */
 .page-content-light.page-who::before {
   background-image: url('gold.png');
 }
@@ -450,22 +466,6 @@ form textarea {
 .page-content-light.page-join::before {
   background-image: url('red.png');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
