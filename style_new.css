@@ -344,6 +344,7 @@ footer {
 /* Light page content */
 .page-content-light {
   background-color: var(--color-neutral-light);
+  background-image: url('gold.png');
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
