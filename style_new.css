@@ -436,7 +436,7 @@ footer {
 }
 
 /* One background image for all hero sections */
-/*
+
 .page-content-light::before {
   content: "";
   position: absolute;
@@ -450,7 +450,7 @@ footer {
 }
 
 /* Put text above image */
-/*
+
 .page-hero-light h1 {
   position: relative;
   z-index: 1;
