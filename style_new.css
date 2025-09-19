@@ -461,8 +461,19 @@ footer {
 
 /* Different backgrounds*/
 
-/* Different background images for each page */
-/*
+.page-content-light {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: var(--color-neutral-dark);
+  line-height: 1.6;
+  border-radius: 8px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .page-who::before {
   background-image: url('gold.png');
 }
