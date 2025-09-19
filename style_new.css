@@ -426,7 +426,7 @@ footer {
 }
 
 
-.page-hero-light {
+.page-content-light {
   position: relative;
   color: var(--color-neutral-light);
   text-align: center;
@@ -436,7 +436,7 @@ footer {
 }
 
 /* One background image for all hero sections */
-.page-hero-light::before {
+.page-content-light::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
