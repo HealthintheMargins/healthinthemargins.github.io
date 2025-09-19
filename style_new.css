@@ -570,6 +570,51 @@ form textarea {
   }
 }
 
+/* FAQ accordion styles */
+.faq-item {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: rgba(255,255,255,0.9); /* same semi-transparent as info panels */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-question::after {
+  content: "+";
+  float: right;
+  transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+  content: "−";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1rem;
+}
+
+.faq-answer p {
+  margin: 1rem 0;
+  color: var(--color-neutral-dark);
+}
+
+
 
 
 
