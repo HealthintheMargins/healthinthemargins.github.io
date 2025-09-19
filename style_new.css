@@ -442,7 +442,7 @@ form textarea {
   background-image: url('gold.png');  /* default overlay */
   background-size: cover;
   background-position: center;
-  opacity: 0.5;                       /* 50% opacity overlay */
+  opacity: 0.8;                       /* 50% opacity overlay */
   z-index: 0;
 }
 
