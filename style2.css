@@ -310,11 +310,11 @@ footer {
   height: 100px;              
   margin: 0 auto;         /* center horizontally with auto margins */
   text-align: center;        /* center child elements */
-  padding: 1rem;             /* optional padding */
+  padding: 0;             /* optional padding */
 }
 
 .survey-feature img {
-  display: inline-block;     /* behaves like a block inside the centered text */
+  display: block;     /* behaves like a block inside the centered text */
   max-width: 100%;           /* scales down on small screens */
   height: 200px;              
   border-radius: 8px;        /* optional rounded corners */
@@ -325,6 +325,7 @@ footer {
 .survey-feature img:hover {
   transform: scale(1.03);
 }
+
 
 
 
