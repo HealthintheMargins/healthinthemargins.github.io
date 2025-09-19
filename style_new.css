@@ -436,16 +436,15 @@ footer {
 }
 
 /* One background image for all hero sections */
-
-.page-content-light::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+.page-hero-light {
+  position: relative;
+  background-image: url('dark_background.png');
   background-size: cover;
-  background-image: url('dark_background.png');  
   background-position: center;
-  opacity: 0.5;               
+  background-repeat: no-repeat;
+  color: var(--color-neutral-light);
+  text-align: center;
+  padding: 1rem 1rem;
   z-index: 0;
 }
 
