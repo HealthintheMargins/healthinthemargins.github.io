@@ -358,7 +358,7 @@ form textarea {
 }
 
 .info-panel {
-  background: #fff;
+  background:  rgba(255, 255, 255, 0.8); /* 80% opaque white */
   border-radius: 8px;
   padding: 2rem;
   margin-bottom: 2rem;
