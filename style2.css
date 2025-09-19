@@ -159,7 +159,7 @@ footer {
   header nav ul {
     display: none;
     flex-direction: column;
-    background-color: var(--color-primary);
+    background-color: var(--color-black);
     position: absolute;
     top: 70px; /* below header */
     right: 0;
@@ -302,6 +302,7 @@ footer {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 
 
 
