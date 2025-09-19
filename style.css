@@ -16,6 +16,14 @@ main img:first-child {
   --color-neutral-light: #F8F9F6;
   --color-neutral-dark: #222222;
 }
+.page-content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-neutral-light);
+  line-height: 1.6;
+}
 
 body {
   font-family:  'Inter', sans-serif;
@@ -271,6 +279,7 @@ footer {
   object-fit: cover;      /* crop to fill */
   display: block;
 }
+
 
 
 
