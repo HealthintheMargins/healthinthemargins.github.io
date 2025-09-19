@@ -445,7 +445,7 @@ footer {
   background-size: cover;
   background-image: url('dark_background.png');  one file for all pages
   background-position: center;
-  opacity: 0.5;                /* adjust for subtlety */
+  opacity: 0.5;               
   z-index: 0;
 }
 
