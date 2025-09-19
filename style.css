@@ -20,13 +20,13 @@ main img:first-child {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
-  font-family: 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+  font-family:  'Arial Narrow Bold', sans-serif;
   color: var(--color-neutral-light);
   line-height: 1.6;
 }
 
 body {
-  font-family: 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+  font-family:  'Arial Narrow Bold', sans-serif;
   margin: 0;
   background-color: var(--color-neutral-light);
   color: var(--color-neutral-dark);
@@ -242,7 +242,7 @@ footer {
 }
 
 .hero h1 {
-  font-family: 'Haettenschweiler', 'Arial Narrow Bold', sans-serif; /* fallback */
+  font-family:  'Arial Narrow Bold', sans-serif; /* fallback */
   font-size: 3rem;
   margin-bottom: 0.5rem;
   color: var(--color-neutral-light);
@@ -279,6 +279,7 @@ footer {
   object-fit: cover;      /* crop to fill */
   display: block;
 }
+
 
 
 
