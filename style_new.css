@@ -351,6 +351,7 @@ form textarea {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
+  border-radius: 8px;
   color: var(--color-neutral-dark);
   line-height: 1.6;
    z-index: 0;
