@@ -532,6 +532,43 @@ form textarea {
 .page-content-light::before {
   opacity: 0.5; /* unify content overlays */
 }
+.about-founder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.8); /* semi-transparent white panel */
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.about-founder .founder-image img {
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.about-founder .founder-text {
+  flex: 1;
+  color: var(--color-neutral-dark);
+}
+
+.about-founder .founder-text h2 {
+  color: var(--color-primary);
+  font-family: 'Arial Narrow Bold', sans-serif;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .about-founder {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-founder .founder-image img {
+    margin: 0 auto;
+  }
+}
 
 
 
