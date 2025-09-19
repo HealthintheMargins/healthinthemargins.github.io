@@ -460,15 +460,15 @@ footer {
 /* Different backgrounds*/
 
 /* Different background images for each page */
-.page-hero-light-who::before {
+.page-who::before {
   background-image: url('gold.png');
 }
 
-.page-hero-light-what::before {
+.page-what::before {
   background-image: url('green.png');
 }
 
-.page-hero-light-join::before {
+.page-join::before {
   background-image: url('red.png');
 }
 
