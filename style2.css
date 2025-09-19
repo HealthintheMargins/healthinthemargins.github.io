@@ -263,6 +263,7 @@ footer {
 }
 
 .feature {
+  max-width: 900px;  
   display: block;
   border-radius: 8px;
   overflow: hidden;
@@ -302,6 +303,7 @@ footer {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 
 
 
