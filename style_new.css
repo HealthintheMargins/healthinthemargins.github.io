@@ -618,6 +618,21 @@ form textarea {
 
 
 
+/* --- Force FAQ above overlays --- */
+.page-faq,
+.page-faq .faq-item,
+.page-faq .faq-question,
+.page-faq .faq-answer {
+  position: relative !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+/* Make sure overlays behind don’t block clicks */
+.page-faq::before,
+.page-faq::after {
+  pointer-events: none !important;
+}
 
 
 
