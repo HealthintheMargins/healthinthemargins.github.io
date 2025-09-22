@@ -569,16 +569,16 @@ form textarea {
     margin: 0 auto;
   }
 }
-
-/* FAQ accordion styles */
+/* FAQ accordion styles (add to style_new.css) */
 .faq-item {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 1rem;
-  background: rgba(255,255,255,0.9); /* same semi-transparent as info panels */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.92); /* matches info-panels */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
+/* Question button */
 .faq-question {
   width: 100%;
   background: none;
@@ -592,20 +592,22 @@ form textarea {
   outline: none;
 }
 
+/* Plus/minus indicator */
 .faq-question::after {
   content: "+";
   float: right;
-  transition: transform 0.3s;
+  transition: transform 0.25s;
 }
 
 .faq-question.active::after {
   content: "−";
 }
 
+/* Answer content (collapsed by default) */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.35s ease;
   padding: 0 1rem;
 }
 
@@ -613,6 +615,7 @@ form textarea {
   margin: 1rem 0;
   color: var(--color-neutral-dark);
 }
+
 
 
 
