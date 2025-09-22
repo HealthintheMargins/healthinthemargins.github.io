@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>FAQ Test</title>
+  <style>
+    :root {
+      --color-primary: #4E0C0B;
+      --color-neutral-dark: #222222;
+    }
+    .page-content-light {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .faq-item {
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      cursor: pointer;
+      outline: none;
+    }
+    .faq-question::after {
+      content: "+";
+      float: right;
+      transition: transform 0.25s;
+    }
+    .faq-question.active::after {
+      content: "−";
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 1rem;
+    }
+    .faq-answer p {
+      margin: 1rem 0;
+      color: var(--color-neutral-dark);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-content-light">
+    <div class="faq-item">
+      <button type="button" class="faq-question">What is epistemic justice?</button>
+      <div class="faq-answer">
+        <p>Epistemic justice means honouring and restoring...</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button type="button" class="faq-question">How do you centre communities?</button>
+      <div class="faq-answer">
+        <p>We co-create every project...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqButtons = document.querySelectorAll('.faq-question');
+      faqButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          button.classList.toggle('active');
+          const answer = button.nextElementSibling;
+          if (button.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = 0;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
