@@ -634,6 +634,11 @@ form textarea {
   pointer-events: none !important;
 }
 
+/* Fix FAQ clicks over overlay */
+.page-content-light::before {
+  z-index: -1 !important;   /* push overlay behind */
+  pointer-events: none !important; /* stop it from intercepting clicks */
+}
 
 
 
