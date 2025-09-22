@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Health in the Margins – FAQ">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Health in the Margins – FAQ" />
   <title>FAQ | Health in the Margins</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style_new.css">
@@ -14,105 +14,88 @@
   <!-- HEADER -->
   <header>
     <div class="logo">
-   <img src="logo-dark-brown.png" alt="Health in the Margins logo">
-  </div>
-  <!-- Hamburger icon -->
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <img src="logo-dark-brown.png" alt="Health in the Margins logo">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="what-we-do.html">What We Do</a></li>
+        <li><a href="join-us.html">Join Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav>
-    <ul id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="who-we-are.html">Who We Are</a></li>
-      <li><a href="what-we-do.html">What We Do</a></li>
-      <li><a href="join-us.html">Join Us</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- Page hero bar -->
-<section class="page-hero-light">
-  <h1>Frequently Asked Questions</h1>
-</section>
-
+  <!-- Page hero bar -->
+  <section class="page-hero-light">
+    <h1>Frequently Asked Questions</h1>
+  </section>
 
   <!-- PAGE CONTENT -->
- <div class="page-content-light page-faq">
-  <div class="faq-item">
-    <button class="faq-question">What is epistemic justice?</button>
-    <div class="faq-answer">
-      <p>Epistemic justice means honouring and restoring the knowledge, traditions, and lived experiences of frontline communities. We believe everyone’s ways of knowing should shape how health is defined, researched, and delivered.</p>
+  <div class="page-content-light page-faq">
+    <div class="faq-item">
+      <button type="button" class="faq-question">What is epistemic justice?</button>
+      <div class="faq-answer">
+        <p>Epistemic justice means honouring and restoring the knowledge, traditions, and lived experiences of frontline communities. We believe everyone’s ways of knowing should shape how health is defined, researched, and delivered.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button type="button" class="faq-question">How do you centre communities?</button>
+      <div class="faq-answer">
+        <p>We co-create every project with those most impacted by health injustice. Community voices, leadership, and priorities guide our work from start to finish.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button type="button" class="faq-question">Who are frontline communities?</button>
+      <div class="faq-answer">
+        <p>Frontline communities are those most affected by health injustice and whose knowledge and experiences are often overlooked.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button type="button" class="faq-question">How is your approach unique?</button>
+      <div class="faq-answer">
+        <p>We challenge dominant global health models by centring community knowledge and leadership. Our work is participatory, inclusive, and rooted in justice, aiming for real, lasting change in health equity.</p>
+      </div>
     </div>
   </div>
-
-  <div class="faq-item">
-    <button class="faq-question">How do you centre communities?</button>
-    <div class="faq-answer">
-      <p>We co-create every project with those most impacted by health injustice. Community voices, leadership, and priorities guide our work from start to finish.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">Who are frontline communities?</button>
-    <div class="faq-answer">
-      <p>Frontline communities are those most affected by health injustice and whose knowledge and experiences are often overlooked.</p>
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">How is your approach unique?</button>
-    <div class="faq-answer">
-      <p>We challenge dominant global health models by centring community knowledge and leadership. Our work is participatory, inclusive, and rooted in justice, aiming for real, lasting change in health equity.</p>
-    </div>
-  </div>
-</div>
-
 
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Health in the Margins CIC. All Rights Reserved.</p>
   </footer>
+
   <script>
-function toggleMenu() {
-  document.getElementById('nav-links').classList.toggle('show');
-}
-</script>
-<script>
-  document.querySelectorAll(".faq-question").forEach(button => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("active");
-      const answer = button.nextElementSibling;
+    /* Mobile nav toggle */
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
 
-      if (button.classList.contains("active")) {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      } else {
+    /* FAQ accordion behaviour — multi-open allowed */
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqButtons = document.querySelectorAll('.faq-question');
+
+      faqButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          button.classList.toggle('active');
+          const answer = button.nextElementSibling;
+          if (button.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = 0;
+          }
+        });
+
+        // Ensure initial state is collapsed (in case of inlined styles)
+        const answer = button.nextElementSibling;
         answer.style.maxHeight = 0;
-      }
+      });
     });
-  });
-</script>
-  <!-- Other content of your FAQ page -->
-
-<script>
-  const faqButtons = document.querySelectorAll(".faq-question");
-
-  faqButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      // Just toggle the clicked one — don’t close others
-      button.classList.toggle("active");
-      const answer = button.nextElementSibling;
-
-      if (button.classList.contains("active")) {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      } else {
-        answer.style.maxHeight = 0;
-      }
-    });
-  });
-</script>
-</body>
-</html>
-
+  </script>
 
 </body>
 </html>
