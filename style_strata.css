@@ -438,37 +438,47 @@ footer {
     padding: 0 1rem;        /* matches page padding */
   }
 }
-
-/* =====================================
-   STRATA-STYLE SPLIT LAYOUT (CLEAN)
-   ===================================== */
+/* ============================
+   STRATA-STYLE SPLIT LAYOUT
+   ============================ */
 
 /* Desktop */
 @media (min-width: 1024px) {
-
   .layout {
     display: grid;
-    grid-template-columns: 38% 62%; /* Strata ratio */
+    grid-template-columns: 38% 62%;
     gap: 3rem;
-
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 0; /* remove padding around edges */
   }
 
   .left-panel {
     grid-column: 1;
+    padding-left: 0;  /* remove padding left */
   }
 
   .right-panel {
     grid-column: 2;
-    background: var(--color-black);
+    padding-right: 0; /* remove padding right */
+    background: var(--color-neutral-light); /* beige right column */
+    overflow-y: auto;  /* independent scroll */
+    max-height: 100vh; /* fill viewport */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two-column layout for activities */
+    gap: 1.5rem;
+  }
+
+  /* Activity images in horizontal grid */
+  .activity-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 }
 
 /* Tablet + Mobile */
 @media (max-width: 1023px) {
-
   .layout {
     display: block;
   }
@@ -479,11 +489,16 @@ footer {
   }
 
   .right-panel {
-    background: var(--color-black);
+    background: var(--color-neutral-light); /* keep beige */
     padding: 0 1rem;
+    display: block; /* single column */
+  }
+
+  .activity-images {
+    display: block; /* vertical stack */
+    gap: 2rem;
   }
 }
-
 
 
 
