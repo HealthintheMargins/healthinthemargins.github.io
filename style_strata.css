@@ -468,11 +468,26 @@ footer {
   padding: 2rem;
 }
 
+.carousel {
+  width: 100%;
+  margin: 0;
+}
 
 
+.left-panel > * {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
 
-
+  .right-panel {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
