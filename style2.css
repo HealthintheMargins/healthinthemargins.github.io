@@ -326,35 +326,8 @@ footer {
   transform: scale(1.03);
 }
 
-.layout {
-  display: block;
-}
 
 
-@media (min-width: 900px) {
-
-  .layout {
-    display: flex;
-    min-height: 100vh;
-  }
-
-  .site-header {
-    width: 300px;
-    flex-shrink: 0;
-    padding: 3em 2em;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    border-right: 1px solid #e0e0e0;
-  }
-
-  #content {
-    flex: 1;
-    padding: 3em 4em;
-  }
-
-}
 
 
 
