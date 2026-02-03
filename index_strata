@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Health in the Margins – Recentring subjugated knowledge systems and practices in global health action">
+  <title>Health in the Margins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_strata.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9FM4C2HVLE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9FM4C2HVLE');
+</script>
+</head>
+<body>
+
+<div class="layout">
+  <div class="left-panel">
+<header>
+
+  <!-- Hamburger icon shows on mobile only -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="who-we-are.html">Who We Are</a></li>
+      <li><a href="what-we-do.html">What We Do</a></li>
+      <li><a href="join-us.html">Join Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+     <li><a href="faq.html">FAQs</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="container">
+<!-- SEO-friendly text hidden from users -->
+<div class="visually-hidden">
+  <h1>Health in the Margins</h1>
+  <p>Recentring subjugated knowledge systems and practices in global health</p>
+</div>
+
+<!-- Hero section -->
+<div class="hero">
+  <img src="header_logo_only_black.png" alt="Health in the Margins" class="hero-img">
+</div>
+
+<!-- Tag line section -->
+<div class="tag">
+  <img src="header_tagline_black.png" alt="Tag line" class="tag-img">
+</div>
+
+<main>
+  
+ <!-- 3-column section -->
+<div class="features">
+  <a href="who-we-are.html" class="feature">
+    <img src="who_we_are.png" alt="Who We Are">
+  </a>
+  <a href="what-we-do.html" class="feature">
+    <img src="What_we_do.png" alt="What We Do">
+  </a>
+  <a href="join-us.html" class="feature">
+    <img src="Join_us.png" alt="Join Us">
+  </a>
+</div> 
+     
+
+    <!-- Carousel -->
+<div class="carousel-container">
+  <div class="carousel-slide fade">
+    <img src="Post6.2.jpg" alt="Slide 1">
+  </div>
+  <div class="carousel-slide fade">
+    <img src="Post6.3.jpg" alt="Slide 2">
+  </div>
+  <div class="carousel-slide fade">
+    <img src="post9.1.png" alt="Slide 3">
+  </div>
+    <div class="carousel-slide fade">
+    <img src="post9.2.png" alt="Slide 4">
+  </div>
+    <div class="carousel-slide fade">
+    <img src="post9.3.png" alt="Slide 5">
+  </div>
+      <div class="carousel-slide fade">
+    <img src="post10.png" alt="Slide 6">
+  </div>
+  <!-- Dots -->
+  <div class="carousel-dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+</div>
+  </div>
+
+  </div>
+
+  <div class="right-panel">  
+<!-- Activities / explainer images -->
+<section class="activity-images" aria-labelledby="activities-heading">
+  <h2 id="activities-heading" class="visually-hidden">Our activities</h2>
+
+  <div class="activity-image">
+    <img src="post 2.1.jpg" alt="We envision a world where epistemic justice is restored such that frontline communities can use our own knowledge systems and practices to lead global health action on the health crises we face, to maintain community health and wellbeing.">
+  </div>
+
+  <div class="activity-image">
+    <img src="post 3.jpg" alt="What we do: community-led research and education, co-create health programmes and evaluation, advocacy">
+  </div>
+
+  <div class="activity-image">
+    <img src="post 2.2.png" alt="Definition of frontline communities">
+  </div>
+
+</section>
+
+  
+<!--survey link -->
+<div class="feature survey-feature">
+  <a href=" https://tally.so/r/mORdoR/" class="feature">
+    <img src="survey.png" alt="Link to take our survey">
+  </a>
+</div> 
+
+  <div class="cta">
+    <p>Connect with us:<br>
+      <a href="mailto:connect@healthinthemargins.org">connect@healthinthemargins.org</a> |
+      <a href="https://www.instagram.com/healthinthemargins/" target="_blank">Instagram</a>
+    </p>
+  </div>
+</main>
+
+</div>
+</div>
+
+ <section class="supporters" aria-labelledby="supporters-heading">
+  <h2 id="supporters-heading">Supported by</h2>
+
+  <div class="supporters-logos">
+    <img src="hdruk_logo.jpg" alt="Health Data Research UK">
+    <img src="social enterprise logo.png" alt="Social Enterprise UK">
+    <img src="boring-fund_logo.png" alt="The Boring Fundr">
+    <img src="NCVO member logo COLOUR.png" alt="NCVO">
+  </div>
+</section>
+
+  
+<footer>
+  &copy; 2025 Health in the Margins CIC. All rights reserved. COmapnies House number 16685998
+</footer>
+
+<!-- Toggle script for hamburger menu -->
+<script>
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('show');
+}
+</script>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("carousel-slide");
+  const dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active-dot", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active-dot";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+function currentSlide(n) {
+  slideIndex = n-1;
+  showSlides();
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
