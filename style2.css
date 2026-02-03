@@ -387,6 +387,16 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .carousel-container {
+    margin-bottom: 1.5em;   /* tighter gap */
+  }
+
+  .activity-images {
+    margin-top: 1.5em;
+  }
+}
+
 /* --- Activity images: EXACT match to carousel --- */
 
 .activity-images {
@@ -423,6 +433,11 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .activity-images {
+    padding: 0 1rem;        /* matches page padding */
+  }
+}
 
 
 
