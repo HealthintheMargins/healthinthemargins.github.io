@@ -489,6 +489,32 @@ footer {
   }
 }
 
+/* =====================================
+   STRATA-STYLE SPLIT LAYOUT
+   ===================================== */
+
+/* Desktop only */
+@media (min-width: 1024px) {
+
+  .layout {
+    display: grid;
+    grid-template-columns: 38% 62%; /* Strata ratio */
+    gap: 3rem;
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .left-panel {
+    grid-column: 1;
+  }
+
+  .right-panel {
+    grid-column: 2;
+    background: var(--color-black); /* restore black */
+  }
+}
 
 
 
