@@ -439,52 +439,7 @@ footer {
   }
 }
 
-/* ===========================
-   STRATA-STYLE DESKTOP LAYOUT
-   =========================== */
 
-@media (min-width: 1024px) {
-
-  main.layout {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-
-    display: grid;
-    grid-template-columns: 60% 40%;   /* Strata ratio */
-    column-gap: 3rem;
-    align-items: start;
-  }
-
-  .layout-left {
-    grid-column: 1;
-  }
-
-  .activity-images {
-    grid-column: 2;
-    margin: 0;
-    padding: 0;
-  }
-}
-@media (min-width: 1024px) {
-  .layout-left {
-    position: sticky;
-    top: 2rem;
-  }
-}
-
-
-
-/* Force hamburger menu on all screen sizes */
-
-header nav ul {
-  display: none !important;
-}
-
-.menu-toggle {
-  display: block !important;
-  color: var(--color-neutral-light);
-}
 
 
 
