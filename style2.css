@@ -466,6 +466,13 @@ footer {
     padding: 0;
   }
 }
+@media (min-width: 1024px) {
+  .layout-left {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
 
 
 /* Force hamburger menu on all screen sizes */
@@ -478,6 +485,7 @@ header nav ul {
   display: block !important;
   color: var(--color-neutral-light);
 }
+
 
 
 
