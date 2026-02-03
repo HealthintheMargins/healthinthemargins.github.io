@@ -516,6 +516,26 @@ footer {
   }
 }
 
+/* =====================================
+   TABLET + MOBILE: SINGLE COLUMN
+   ===================================== */
+
+@media (max-width: 1023px) {
+
+  .layout {
+    display: block; /* kill grid explicitly */
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .right-panel {
+    background: var(--color-black); /* keep black */
+  }
+}
+
 
 
 
