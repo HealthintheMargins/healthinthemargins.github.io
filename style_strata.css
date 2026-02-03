@@ -537,6 +537,11 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+  .right-panel {
+    padding: 0 1rem;
+  }
+}
 
 
 
