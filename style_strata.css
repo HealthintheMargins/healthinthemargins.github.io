@@ -439,61 +439,11 @@ footer {
   }
 }
 
-
-/* ===== Desktop split layout ===== */
-.layout {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  min-height: 100vh;
-}
-
-/* Left side: full bleed */
-.left-panel {
-  padding: 0;
-  margin: 0;
-}
-
-/* Right side: tile area */
-.right-panel {
-  padding: 2rem;
-  background: #f7f7f7;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-.left-columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.carousel {
-  width: 100%;
-  margin: 0;
-}
-
-
-.left-panel > * {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-@media (max-width: 980px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .right-panel {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* =====================================
-   STRATA-STYLE SPLIT LAYOUT
+   STRATA-STYLE SPLIT LAYOUT (CLEAN)
    ===================================== */
 
-/* Desktop only */
+/* Desktop */
 @media (min-width: 1024px) {
 
   .layout {
@@ -512,18 +462,15 @@ footer {
 
   .right-panel {
     grid-column: 2;
-    background: var(--color-black); /* restore black */
+    background: var(--color-black);
   }
 }
 
-/* =====================================
-   TABLET + MOBILE: SINGLE COLUMN
-   ===================================== */
-
+/* Tablet + Mobile */
 @media (max-width: 1023px) {
 
   .layout {
-    display: block; /* kill grid explicitly */
+    display: block;
   }
 
   .left-panel,
@@ -532,16 +479,11 @@ footer {
   }
 
   .right-panel {
-    background: var(--color-black); /* keep black */
-  }
-}
-
-
-@media (max-width: 768px) {
-  .right-panel {
+    background: var(--color-black);
     padding: 0 1rem;
   }
 }
+
 
 
 
