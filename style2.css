@@ -389,11 +389,11 @@ footer {
 
 @media (max-width: 768px) {
   .carousel-container {
-    margin-bottom: 1.5em;   /* tighter gap */
+    margin-bottom: 1em;   /* tighter gap */
   }
 
   .activity-images {
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 }
 
@@ -437,6 +437,48 @@ footer {
   .activity-images {
     padding: 0 1rem;        /* matches page padding */
   }
+}
+
+/* ===========================
+   STRATA-STYLE DESKTOP LAYOUT
+   =========================== */
+
+@media (min-width: 1024px) {
+
+  main.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    display: grid;
+    grid-template-columns: 60% 40%;   /* Strata ratio */
+    column-gap: 3rem;
+    align-items: start;
+  }
+
+  /* Right column */
+  .activity-images {
+    grid-column: 2;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Left column */
+  .layout-left {
+    grid-column: 1;
+  }
+}
+
+
+/* Force hamburger menu on all screen sizes */
+
+header nav ul {
+  display: none !important;
+}
+
+.menu-toggle {
+  display: block !important;
+  color: var(--color-neutral-light);
 }
 
 
