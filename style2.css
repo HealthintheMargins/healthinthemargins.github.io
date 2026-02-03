@@ -456,16 +456,14 @@ footer {
     align-items: start;
   }
 
-  /* Right column */
+  .layout-left {
+    grid-column: 1;
+  }
+
   .activity-images {
     grid-column: 2;
     margin: 0;
     padding: 0;
-  }
-
-  /* Left column */
-  .layout-left {
-    grid-column: 1;
   }
 }
 
@@ -480,6 +478,7 @@ header nav ul {
   display: block !important;
   color: var(--color-neutral-light);
 }
+
 
 
 
