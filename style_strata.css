@@ -167,10 +167,13 @@ header nav ul li a {
 
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
-  justify-items: center;   /* ← THIS is the missing piece */
-  padding-inline: 1rem;    /* matches carousel padding on mobile */
+
+  max-width: 900px;
+  margin: 2.5rem auto;   /* ← THIS is the centering */
+  padding: 0 1rem;
+
   box-sizing: border-box;
 }
 
