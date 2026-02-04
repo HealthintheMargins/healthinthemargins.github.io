@@ -167,16 +167,20 @@ header nav ul li a {
 
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 per row on desktop */
   gap: 1rem;
-  width: 100%;       /* optional, full width */
-  max-width: none;   /* remove any constraints from container */
-  margin: 2rem auto; /* center vertically + spacing */
+  width: 100vw;        /* full viewport width */
+  max-width: none;     /* remove container width limit */
+  margin: 2rem 0;      /* vertical spacing */
+  justify-items: center; /* center items in each column */
+  padding: 0 1rem;     /* optional padding on small screens */
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .activity-features {
     grid-template-columns: 1fr; /* stack on mobile */
+    justify-items: center;      /* center single column items */
   }
 }
 
@@ -185,8 +189,9 @@ header nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1 / 1;   /* keeps them square */
-  max-width: 400px;      /* optional cap for large screens */
+  aspect-ratio: 1 / 1;
+  max-width: 400px;   /* cap width of each tile */
+  width: 100%;        /* allow grid to shrink on small screens */
   background: #000;
   border-radius: 8px;
   overflow: hidden;
