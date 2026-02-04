@@ -397,49 +397,6 @@ footer {
   }
 }
 
-/* --- Activity images: EXACT match to carousel --- */
-
-.activity-images {
-  max-width: 900px;       /* same as carousel */
-  margin: 3em auto;
-  display: flex;
-  flex-direction: column;
-  gap: 3em;               /* same vertical rhythm */
-}
-
-.activity-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;    /* identical to carousel */
-  background: #000;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgba(226, 200, 140, 0.6);
-  display: flex;          /* key: centers image */
-  align-items: center;
-  justify-content: center;
-}
-
-.activity-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;    /* NEVER crop */
-  display: block;
-}
-
-/* Mobile: same behavior */
-@media (max-width: 768px) {
-  .activity-image {
-    aspect-ratio: 1 / 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .activity-images {
-    padding: 0 1rem;        /* matches page padding */
-  }
-}
-
-
 /* --- Activities grid: centered, matches carousel width --- */
 .activity-features {
   display: grid;
@@ -479,6 +436,7 @@ footer {
   margin-right: auto;
   box-sizing: border-box;
 }
+
 
 
 
