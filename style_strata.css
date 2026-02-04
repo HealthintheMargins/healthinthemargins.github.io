@@ -438,5 +438,10 @@ footer {
   box-sizing: border-box;
 }
 
+.hero-img {
+  max-height: 140px;   /* try 120–160px */
+  width: 100%;
+  object-fit: contain;
+}
 
 
