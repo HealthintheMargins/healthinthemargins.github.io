@@ -78,8 +78,6 @@ header nav ul li a {
 
 /* Carousel */
 .carousel-container {
-  max-width: 900px;
-  margin: 1.5rem auto;   /* less vertical space */
   position: relative;
 }
 
@@ -122,8 +120,6 @@ header nav ul li a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  max-width: 900px;
-  margin: 2rem auto;
 }
 
 .feature {
@@ -173,10 +169,6 @@ header nav ul li a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-
-  max-width: 900px;
-  margin: 2.5rem auto;
-
   justify-items: center;   /* ← THIS is the missing piece */
   padding-inline: 1rem;    /* matches carousel padding on mobile */
   box-sizing: border-box;
