@@ -143,7 +143,7 @@ header nav ul li a {
   display: block;
 }
 
-}
+
 .survey-feature {
   width: 100%;               /* take full width on small screens */
   max-width: 600px;          /* cap width on large screens */
@@ -171,12 +171,17 @@ header nav ul li a {
 
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
 
-  max-width: 900px;        /* SAME as carousel */
-  margin: 2.5rem auto;     /* centers it */
-  padding: 0;
+  width: 100%;
+  max-width: 900px;     /* EXACT carousel width */
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+  align-content: center;
+
   box-sizing: border-box;
 }
 
