@@ -182,6 +182,8 @@ header nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  aspect-ratio: 1 / 1;   /* keeps them square */
+  max-width: 400px;      /* optional cap for large screens */
   background: #000;
   border-radius: 8px;
   overflow: hidden;
