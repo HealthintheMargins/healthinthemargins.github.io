@@ -167,14 +167,8 @@ header nav ul li a {
 
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
-  gap: 1.5rem;
-
-  max-width: none;      /* remove max-width restriction */
-  width: 100%;          /* full width of viewport */
-  margin: 2rem auto;    /* vertical spacing + auto horizontal centering if needed */
-  padding: 0 1rem;      /* optional side padding */
-  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -188,8 +182,6 @@ header nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  aspect-ratio: 1 / 1;     /* square tiles */
   background: #000;
   border-radius: 8px;
   overflow: hidden;
