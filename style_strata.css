@@ -367,7 +367,7 @@ footer {
 .carousel-slide {
   display: none;
   width: 100%;
-  aspect-ratio: 1 / 1;          /* perfect for 1080x1080 */
+  aspect-ratio: 21 / 9;          /* perfect for 1080x1080 */
   background: #000;             /* letterbox background */
   border-radius: 8px;
   overflow: hidden;
@@ -437,4 +437,13 @@ footer {
   margin-right: auto;
   box-sizing: border-box;
 }
-
+/* --- Tighter vertical rhythm above activities --- */
+.hero,
+.tag,
+.features,
+.carousel-container {
+  margin-bottom: 0.5rem; /* was effectively much larger */
+}
+.feature img {
+  height: 60px;
+}
