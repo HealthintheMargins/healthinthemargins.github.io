@@ -394,59 +394,59 @@ footer {
 
 
 /* Container grid: 2x2, fixed width */
-.activity-grid {
+/* 2x2 grid like features */
+.activity-features {
+  max-width: 900px;                /* same as carousel */
+  margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-auto-rows: 1fr; /* equal row heights */
-  max-width: 900px;    /* match carousel width */
-  gap: 1rem;           /* spacing between items */
-  margin: 2rem auto;   /* center on page */
+  gap: 1rem;                         /* spacing between items */
 }
 
-/* Make each grid item a square and shrink images to fit */
-.grid-item {
-  aspect-ratio: 1 / 1;      /* perfect square */
+/* Activity item styling */
+.activity-item {
+  display: block;
   overflow: hidden;
   border-radius: 8px;
+  background-color: #fff;           /* default white background */
 }
 
-.grid-item img {
+.activity-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;        /* crop image to fill square */
+  height: 200px;                     /* fixed height like features */
+  object-fit: cover;                  /* crop to fill */
   display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Survey link special styling (beige background) */
+.activity-item:hover img {
+  transform: scale(1.03);
+}
+
+/* Survey link special styling */
 .survey-item {
-  background-color: #efdaa9;
+  background-color: #efdaa9;          /* beige */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .survey-item img {
-  object-fit: contain;      /* do not crop survey image */
-  padding: 0.5rem;
+  object-fit: contain;                /* do not crop survey image */
+  height: 200px;                      /* match other images */
 }
 
 /* Mobile: single column stack */
 @media (max-width: 768px) {
-  .activity-grid {
+  .activity-features {
     grid-template-columns: 1fr;
-    grid-auto-rows: auto; /* natural height */
   }
 
-  .grid-item {
-    aspect-ratio: auto;
-  }
-
+  .activity-item img,
   .survey-item img {
-    width: 100%;
     height: auto;
   }
 }
-
 
 
 
