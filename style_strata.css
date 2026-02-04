@@ -1,56 +1,34 @@
-
-/* Reset default body margin */
-body {
+/* Reset + Body */
+body, html {
   margin: 0;
   padding: 0;
-}
-main img:first-child {
-  display: block;        /* removes bottom whitespace from inline images */
-  margin-top: 0;         /* no top margin */
-  padding-top: 0;        /* no top padding */
-}
-:root {
-  --color-primary: #4E0C0B;
-  --color-accent: #E2C88C;
-  --color-secondary: #C96C3E;
-  --color-green: #6A715A;
-  --color-neutral-light: #efdaa9ff;
-  --color-neutral-dark: #222222;
-  --color-black:#000000FF
-}
-
-body {
-  font-family:  'Inter', sans-serif;
-  margin: 0;
+  font-family: 'Inter', sans-serif;
   background-color: var(--color-black);
   color: var(--color-neutral-light);
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+/* Header */
 header {
-  Background-color: var(--color-black);
-  padding: 1rem 2rem;
+  background-color: var(--color-black);
+  padding: 0.5rem 2rem;   /* thinner header */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 10; /* make header stack above body */
+  z-index: 10;
 }
 
-header .logo img {
-  max-height: 50px;
-}
-
+/* Navigation */
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   gap: 1.5rem;
   margin: 0;
   padding: 0;
-  position: relative;
-  z-index: 20; /* make dropdown menu above header background */
 }
 
 header nav ul li a {
@@ -59,156 +37,72 @@ header nav ul li a {
   font-weight: 600;
 }
 
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Hamburger icon hidden by default */
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Responsive nav for small screens */
 @media (max-width: 768px) {
   header nav ul {
     display: none;
     flex-direction: column;
     background-color: var(--color-black);
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: 0;
     width: 200px;
     padding: 1rem;
-   z-index: 999; /* super-high so it’s above everything */
+    z-index: 999;
   }
-
   header nav ul.show {
     display: flex;
   }
-
-  .menu-toggle {
-    display: block;
-    color: white;
-  }
+  .menu-toggle { display: block; color: var(--color-neutral-light); }
 }
 
-main {
-  padding: 0;
+/* Hero + Tagline */
+.hero, .tag {
+  width: 100%;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-h1, h2 {
-  color: var(--color-neutral-light);
+.hero-img, .tag-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.cta {
-  background: var(--color-black);
-  color: var(--color-neutral-light);
-  padding: 1rem;
-  text-align: center;
-  border-radius: 8px;
-  margin-top: 2rem;
-}
-
-.cta a {
-  color: var(--color-neutral-light);
-  text-decoration: underline;
-}
-
-.vertical-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-
-.vertical-menu a {
-  background-color: var(--color-green);
-  color: white;
-  padding: 0.75rem;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-}
-
-.vertical-menu a:hover {
-  background-color: var(--color-secondary);
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: var(--color-neutral-light);
-  border-top: 1px solid var(--color-neutral-light);
-  background: var(--color-black);
-}
-
-/* Mobile Menu */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  header nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: var(--color-black);
-    position: absolute;
-    top: 70px; /* below header */
-    right: 0;
-    width: 200px;
-    padding: 1rem;
-  }
-
-  header nav ul.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    color:  var(--color-neutral-light);;
-  }
-}
-
-/* Carousel styles */
+/* Carousel */
 .carousel-container {
-  max-width: 100%;
+  max-width: 900px;
+  margin: 1.5rem auto;   /* less vertical space */
   position: relative;
-  margin: 2rem auto;
 }
 
 .carousel-slide {
   display: none;
+  width: 100%;
+  aspect-ratio: 16/9;    /* thinner, matches full screen */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
 }
 
 .carousel-slide img {
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: contain;   /* preserve image, no cropping */
+  display: block;
 }
 
-/* Fade effect */
-.fade {
-  animation-name: fade;
-  animation-duration: 1s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* Dots below carousel */
+/* Dots */
 .carousel-dots {
   text-align: center;
-  position: relative;
-  top: -30px;
+  margin-top: 0.5rem;
 }
 
 .dot {
@@ -219,239 +113,82 @@ footer {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
+.active-dot, .dot:hover { background-color: #717171; }
 
-.active-dot,
-.dot:hover {
-  background-color: #717171;
-}
-
-/* Hero section */
-.hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-img {
-  width: 100%;
-  height: auto;         /* preserve aspect ratio */
-  display: block;
-}
-
-/*Tag line section */
-.tag  {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.tag-img {
-  width: 100%;
-  height: auto;         /* preserve aspect ratio */
-  display: block;
-}
-
-/* Three-column section */
+/* 3-column Features */
 .features {
-  max-width: 900px;                /* centre on page */
-  justify-content: center;
-  margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* exactly three columns */
-  gap: 1rem;                        /* space between */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
 }
 
 .feature {
-  max-width: 900px;  
   display: block;
-  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
   background: #fff;
   transition: transform 0.3s ease;
 }
 
-.feature:hover {
-  transform: scale(1.03);
-}
+.feature:hover { transform: scale(1.03); }
 
 .feature img {
   width: 100%;
-  height: 100px;          /* fixed height */
-  object-fit: cover;      /* crop to fill */
+  height: 100px;
+  object-fit: cover;
   display: block;
 }
 
-.visually-hidden {
-  position: absolute;
-  left: -9999px; /* moves it off screen */
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.intro {
-  max-width: 700px;
-  margin: 2rem auto;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;
-  color: var(--color-neutral-light);
-}
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0;
-}
-.survey-feature {
-  width: 100%;               /* take full width on small screens */
-  max-width: 600px;          /* cap width on large screens */
-  height: 200px;              
-  margin: 0 auto;         /* center horizontally with auto margins */
-  text-align: center;        /* center child elements */
-  padding: 0;             /* optional padding */
-}
-
-.survey-feature img {
-  display: block;     /* behaves like a block inside the centered text */
-  max-width: 100%;           /* scales down on small screens */
-  height: 200px;              
-  border-radius: 8px;        /* optional rounded corners */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.survey-feature img:hover {
-  transform: scale(1.03);
-}
-
-/* Funders / partners / memberships section */
-
-.supporters {
-  margin-top: 4em;
-  padding: 2.5em 1.5em;
-  border-top: 1px solid #e0e0e0;
-  text-align: center;
-}
-
-.supporters h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 1.5em;
-}
-
-.supporters-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2em;
-}
-
-.supporters-logos img {
-  max-height: 60px;
-  max-width: 160px;
-  object-fit: contain;
-  opacity: 0.9;
-}
-
-
-/* --- Carousel sizing --- */
-
-.carousel-container {
-  max-width: 900px;
-  margin: 3em auto;
-}
-
-.carousel-slide {
-  display: none;
-  width: 100%;
-  aspect-ratio: 1 / 1;          /* perfect for 1080x1080 */
-  background: #000;             /* letterbox background */
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;          /* NO cropping */
-  display: block;
-}
-
-/* Mobile tweak */
-@media (max-width: 768px) {
-  .carousel-slide {
-    aspect-ratio: 1 / 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-container {
-    margin-bottom: 1em;   /* tighter gap */
-  }
-
-
-/* Container grid: 2x2, fixed width */
-/* 2x2 grid like features */
+/* --- Activity Grid 2x2 --- */
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  max-width: 900px;         /* same as carousel */
-  width: 100%;              /* take full available space */
-  margin: 2rem auto;        /* center horizontally */
-  padding: 0;               /* remove inherited padding */
-  box-sizing: border-box;   /* include padding in width */
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-/* Activity item styling */
 .activity-item {
   display: block;
   overflow: hidden;
   border-radius: 8px;
-  background-color: #fff;           /* default white background */
+  background-color: #fff;
 }
 
 .activity-item img,
 .survey-item img {
-  width: 100%;           /* fill column width */
-  height: auto;          /* maintain aspect ratio */
+  width: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;     /* crop if needed */
-  max-width: 100%;       /* override any inherited max-width */
-}
-  
-.activity-features {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  object-fit: cover;
 }
 
-/* Survey link special styling */
+/* Survey item */
 .survey-item {
-  background-color: #efdaa9;          /* beige */
+  background-color: #efdaa9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .survey-item img {
-  object-fit: contain;                /* do not crop survey image */
-  height: 200px;                      /* match other images */
+  object-fit: contain;
+  height: 200px;   /* same as activity images */
 }
 
-/* Mobile: single column stack */
+/* Mobile */
 @media (max-width: 768px) {
   .activity-features {
     grid-template-columns: 1fr;
   }
-
   .activity-item img,
   .survey-item img {
     height: auto;
   }
 }
-
-
-
