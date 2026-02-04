@@ -457,3 +457,32 @@ footer {
 .feature img {
   height: 70px;
 }
+/* --- Swipeable image conveyor --- */
+.image-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+  scroll-snap-type: x mandatory;
+  max-width: 1200px;
+  margin: 0 auto 1rem auto;
+}
+
+.image-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.image-slider::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+.image-slider img {
+  flex: 0 0 auto;
+  width: 280px;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #000;
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
