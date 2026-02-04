@@ -143,44 +143,46 @@ header nav ul li a {
   display: block;
 }
 
-/* --- Activity images: 2x2 grid, aligned to carousel --- */
+/* --- Activities grid: centered, matches carousel width --- */
 
-.activity-images {
-  max-width: 900px;            /* EXACT match to carousel */
-  margin: 3em auto;            /* centers container */
+.activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 1.5em;                  /* space between items */
-  padding: 0;                  /* no side offset */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  max-width: 900px;        /* SAME as carousel */
+  margin: 2.5rem auto;     /* centers it */
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* Individual activity card */
-.activity-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;         /* square like carousel */
-  background: #000;
-  border-radius: 8px;          /* restore rounded edges */
-  overflow: hidden;
-  border: 1px solid rgba(226, 200, 140, 0.6);
+/* Individual activity tile */
+.activity-item {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  aspect-ratio: 1 / 1;     /* square tiles */
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 200, 140, 0.6);
 }
 
-/* Image inside card */
-.activity-image img {
+/* Images inside tiles */
+.activity-item img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;         /* NEVER crop */
+  object-fit: contain;     /* never crop */
   display: block;
 }
 
-/* Mobile: stack into single column */
+/* Mobile: stack */
 @media (max-width: 768px) {
-  .activity-images {
+  .activity-features {
     grid-template-columns: 1fr;
-    padding: 0 1rem;           /* match page padding */
+    padding: 0 1rem;
   }
 }
+
 
