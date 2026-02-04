@@ -143,6 +143,30 @@ header nav ul li a {
   display: block;
 }
 
+}
+.survey-feature {
+  width: 100%;               /* take full width on small screens */
+  max-width: 600px;          /* cap width on large screens */
+  height: 200px;              
+  margin: 0 auto;         /* center horizontally with auto margins */
+  text-align: center;        /* center child elements */
+  padding: 0;             /* optional padding */
+}
+
+.survey-feature img {
+  display: block;     /* behaves like a block inside the centered text */
+  max-width: 100%;           /* scales down on small screens */
+  height: 200px;              
+  border-radius: 8px;        /* optional rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.survey-feature img:hover {
+  transform: scale(1.03);
+}
+
+
 /* --- Activities grid: centered, matches carousel width --- */
 
 .activity-features {
