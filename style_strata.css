@@ -167,14 +167,19 @@ header nav ul li a {
 
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
   gap: 1.5rem;
 
-  max-width: 900px;
-  margin: 2.5rem auto;   /* ← THIS is the centering */
-  padding: 0 1rem;
-
+  max-width: 900px;       /* same as carousel */
+  margin: 2rem auto;      /* center horizontally */
+  padding: 0 1rem;        /* small padding for mobile */
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .activity-features {
+    grid-template-columns: 1fr; /* stack on mobile */
+  }
 }
 
 /* Individual activity tile */
@@ -198,13 +203,6 @@ header nav ul li a {
   display: block;
 }
 
-/* Mobile: stack */
-@media (max-width: 768px) {
-  .activity-features {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
-}
 
 .container {
   max-width: 900px;
