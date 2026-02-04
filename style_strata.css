@@ -1,34 +1,56 @@
-/* Reset + Body */
-body, html {
+
+/* Reset default body margin */
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+}
+main img:first-child {
+  display: block;        /* removes bottom whitespace from inline images */
+  margin-top: 0;         /* no top margin */
+  padding-top: 0;        /* no top padding */
+}
+:root {
+  --color-primary: #4E0C0B;
+  --color-accent: #E2C88C;
+  --color-secondary: #C96C3E;
+  --color-green: #6A715A;
+  --color-neutral-light: #efdaa9ff;
+  --color-neutral-dark: #222222;
+  --color-black:#000000FF
+}
+
+body {
+  font-family:  'Inter', sans-serif;
+  margin: 0;
   background-color: var(--color-black);
   color: var(--color-neutral-light);
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* Header */
 header {
-  background-color: var(--color-black);
-  padding: 0.5rem 2rem;   /* thinner header */
+  Background-color: var(--color-black);
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 10;
+  z-index: 10; /* make header stack above body */
 }
 
-/* Navigation */
+header .logo img {
+  max-height: 50px;
+}
+
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 20; /* make dropdown menu above header background */
 }
 
 header nav ul li a {
@@ -37,7 +59,96 @@ header nav ul li a {
   font-weight: 600;
 }
 
-/* Hamburger Menu */
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger icon hidden by default */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive nav for small screens */
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-black);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+   z-index: 999; /* super-high so it’s above everything */
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: var(--color-neutral-light);
+}
+
+.cta {
+  background: var(--color-black);
+  color: var(--color-neutral-light);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.cta a {
+  color: var(--color-neutral-light);
+  text-decoration: underline;
+}
+
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.vertical-menu a {
+  background-color: var(--color-green);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.vertical-menu a:hover {
+  background-color: var(--color-secondary);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-neutral-light);
+  border-top: 1px solid var(--color-neutral-light);
+  background: var(--color-black);
+}
+
+/* Mobile Menu */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -50,57 +161,54 @@ header nav ul li a {
     flex-direction: column;
     background-color: var(--color-black);
     position: absolute;
-    top: 50px;
+    top: 70px; /* below header */
     right: 0;
     width: 200px;
     padding: 1rem;
-    z-index: 999;
   }
+
   header nav ul.show {
     display: flex;
   }
-  .menu-toggle { display: block; color: var(--color-neutral-light); }
+
+  .menu-toggle {
+    display: block;
+    color:  var(--color-neutral-light);;
+  }
 }
 
-/* Hero + Tagline */
-.hero, .tag {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.hero-img, .tag-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Carousel */
+/* Carousel styles */
 .carousel-container {
+  max-width: 100%;
   position: relative;
+  margin: 2rem auto;
 }
 
 .carousel-slide {
   display: none;
-  width: 100%;
-  aspect-ratio: 16/9;    /* thinner, matches full screen */
-  overflow: hidden;
-  border-radius: 8px;
-  background: #000;
 }
 
 .carousel-slide img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;   /* preserve image, no cropping */
-  display: block;
+  border-radius: 8px;
 }
 
-/* Dots */
+/* Fade effect */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Dots below carousel */
 .carousel-dots {
   text-align: center;
-  margin-top: 0.5rem;
+  position: relative;
+  top: -30px;
 }
 
 .dot {
@@ -111,35 +219,91 @@ header nav ul li a {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
-.active-dot, .dot:hover { background-color: #717171; }
 
-/* 3-column Features */
+.active-dot,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;         /* preserve aspect ratio */
+  display: block;
+}
+
+/*Tag line section */
+.tag  {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tag-img {
+  width: 100%;
+  height: auto;         /* preserve aspect ratio */
+  display: block;
+}
+
+/* Three-column section */
 .features {
+  max-width: 900px;                /* centre on page */
+  justify-content: center;
+  margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);  /* exactly three columns */
+  gap: 1rem;                        /* space between */
 }
 
 .feature {
+  max-width: 900px;  
   display: block;
-  overflow: hidden;
   border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   background: #fff;
   transition: transform 0.3s ease;
 }
 
-.feature:hover { transform: scale(1.03); }
+.feature:hover {
+  transform: scale(1.03);
+}
 
 .feature img {
   width: 100%;
-  height: 100px;
-  object-fit: cover;
+  height: 100px;          /* fixed height */
+  object-fit: cover;      /* crop to fill */
   display: block;
 }
 
-
+.visually-hidden {
+  position: absolute;
+  left: -9999px; /* moves it off screen */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.intro {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-neutral-light);
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 .survey-feature {
   width: 100%;               /* take full width on small screens */
   max-width: 600px;          /* cap width on large screens */
@@ -160,6 +324,77 @@ header nav ul li a {
 
 .survey-feature img:hover {
   transform: scale(1.03);
+}
+
+/* Funders / partners / memberships section */
+
+.supporters {
+  margin-top: 4em;
+  padding: 2.5em 1.5em;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.supporters h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+}
+
+.supporters-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.supporters-logos img {
+  max-height: 60px;
+  max-width: 160px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+
+/* --- Carousel sizing --- */
+
+.carousel-container {
+  max-width: 900px;
+  margin: 3em auto;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  aspect-ratio: 1 / 1;          /* perfect for 1080x1080 */
+  background: #000;             /* letterbox background */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;          /* NO cropping */
+  display: block;
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .carousel-slide {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    margin-bottom: 1em;   /* tighter gap */
+  }
+
+  .activity-images {
+    margin-top: 1em;
+  }
 }
 
 
