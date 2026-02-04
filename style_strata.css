@@ -143,56 +143,44 @@ header nav ul li a {
   display: block;
 }
 
-/* --- Activity Grid 2x2 --- */
-.activity-features {
+/* --- Activity images: 2x2 grid, aligned to carousel --- */
+
+.activity-images {
+  max-width: 900px;            /* EXACT match to carousel */
+  margin: 3em auto;            /* centers container */
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns always */
-  gap: 1rem;
-  max-width: 900px;         /* match carousel width */
-  width: 100%;
-  margin: 2rem auto;
-  padding: 0;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1.5em;                  /* space between items */
+  padding: 0;                  /* no side offset */
   box-sizing: border-box;
 }
 
-/* Force all items to same size */
-.activity-item {
-  display: block;
+/* Individual activity card */
+.activity-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;         /* square like carousel */
+  background: #000;
+  border-radius: 8px;          /* restore rounded edges */
   overflow: hidden;
-  border-radius: 8px;
-  background-color: #fff;
+  border: 1px solid rgba(226, 200, 140, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Resize images to fit grid, force uniform height */
-.activity-item img,
-.survey-item img {
-  width: 100%;           /* fill column width */
-  height: 200px;         /* uniform height */
-  object-fit: cover;     /* crop if image is taller */
+/* Image inside card */
+.activity-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;         /* NEVER crop */
   display: block;
 }
 
-/* Special styling for survey item */
-.survey-item {
-  background-color: #efdaa9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.survey-item img {
-  object-fit: contain;   /* don't crop survey image */
-  height: 200px;
-}
-
-/* Mobile: single column */
+/* Mobile: stack into single column */
 @media (max-width: 768px) {
-  .activity-features {
-    grid-template-columns: 1fr;  /* stack on mobile */
-  }
-
-  .activity-item img,
-  .survey-item img {
-    height: auto;  /* maintain aspect ratio */
+  .activity-images {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;           /* match page padding */
   }
 }
+
