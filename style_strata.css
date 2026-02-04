@@ -146,14 +146,16 @@ header nav ul li a {
 /* --- Activity Grid 2x2 --- */
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 columns always */
   gap: 1rem;
-  max-width: 900px;
+  max-width: 900px;         /* match carousel width */
+  width: 100%;
   margin: 2rem auto;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Force all items to same size */
 .activity-item {
   display: block;
   overflow: hidden;
@@ -161,15 +163,16 @@ header nav ul li a {
   background-color: #fff;
 }
 
+/* Resize images to fit grid, force uniform height */
 .activity-item img,
 .survey-item img {
-  width: 100%;
-  height: auto;
+  width: 100%;           /* fill column width */
+  height: 200px;         /* uniform height */
+  object-fit: cover;     /* crop if image is taller */
   display: block;
-  object-fit: cover;
 }
 
-/* Survey item */
+/* Special styling for survey item */
 .survey-item {
   background-color: #efdaa9;
   display: flex;
@@ -178,17 +181,18 @@ header nav ul li a {
 }
 
 .survey-item img {
-  object-fit: contain;
-  height: 200px;   /* same as activity images */
+  object-fit: contain;   /* don't crop survey image */
+  height: 200px;
 }
 
-/* Mobile */
+/* Mobile: single column */
 @media (max-width: 768px) {
   .activity-features {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* stack on mobile */
   }
+
   .activity-item img,
   .survey-item img {
-    height: auto;
+    height: auto;  /* maintain aspect ratio */
   }
 }
