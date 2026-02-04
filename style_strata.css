@@ -167,7 +167,7 @@ header nav ul li a {
 
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr)); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 1rem;
   justify-content: center;  /* center the whole grid */
   margin: 2rem auto;
