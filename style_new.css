@@ -553,6 +553,7 @@ form textarea {
 .about-founder .founder-text {
   flex: 1;
   color: var(--color-neutral-dark);
+  text-align: left;  /* <-- force left alignment */
 }
 
 .about-founder .founder-text h2 {
@@ -564,7 +565,7 @@ form textarea {
 @media (max-width: 768px) {
   .about-founder {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
   .about-founder .founder-image img {
     margin: 0 auto;
