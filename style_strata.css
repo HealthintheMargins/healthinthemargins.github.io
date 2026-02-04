@@ -167,44 +167,42 @@ header nav ul li a {
 
 .activity-features {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row on desktop */
+  grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 columns, flexible width */
   gap: 1rem;
-  width: 100vw;        /* full viewport width */
-  max-width: none;     /* remove container width limit */
-  margin: 2rem 0;      /* vertical spacing */
-  justify-items: center; /* center items in each column */
-  padding: 0 1rem;     /* optional padding on small screens */
+  justify-content: center;  /* center the whole grid */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
   box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .activity-features {
-    grid-template-columns: 1fr; /* stack on mobile */
-    justify-items: center;      /* center single column items */
+    grid-template-columns: 1fr;  /* stack on mobile */
+    justify-items: center;        /* center items in column */
   }
 }
 
-/* Individual activity tile */
 .activity-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   aspect-ratio: 1 / 1;
-  max-width: 400px;   /* cap width of each tile */
-  width: 100%;        /* allow grid to shrink on small screens */
+  width: 100%;           /* fill the grid column */
+  max-width: 400px;      /* optional cap */
   background: #000;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid rgba(226, 200, 140, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Images inside tiles */
 .activity-item img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;     /* never crop */
+  object-fit: contain;
   display: block;
 }
+
 
 
 .container {
