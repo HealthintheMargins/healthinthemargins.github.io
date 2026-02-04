@@ -439,9 +439,18 @@ footer {
 }
 
 .hero-img {
-  max-height: 140px;   /* try 120–160px */
+  max-height: 120px;   /* try 120–160px */
   width: 100%;
   object-fit: contain;
 }
 
-
+.tag-img {
+  max-height: 70px;    /* try 70–100px */
+  width: 100%;
+  object-fit: contain;
+}
+.hero,
+.tag {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
