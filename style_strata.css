@@ -164,22 +164,20 @@ header nav ul li a {
 
 
 /* --- Activities grid: centered, matches carousel width --- */
-
 .activity-features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 2rem auto;
   padding: 0 1rem;
   max-width: 1200px;
-  justify-items: center;   /* center items horizontally */
+  justify-items: center;   /* center items on ALL screens */
 }
 
-
 .activity-item {
-  aspect-ratio: 1 / 1;
   width: 100%;
-  max-width: 500px;        /* prevents over-stretching on large screens */
+  max-width: 420px;        /* keeps grid looking intentional */
+  aspect-ratio: 1 / 1;
   background: #000;
   border-radius: 8px;
   overflow: hidden;
@@ -193,6 +191,7 @@ header nav ul li a {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 
