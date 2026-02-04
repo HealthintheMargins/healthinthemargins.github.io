@@ -541,6 +541,7 @@ form textarea {
   border-radius: 8px;
   padding: 2rem;
   margin-top: 2rem;
+  text-align: left;
 }
 
 .about-founder .founder-image img {
