@@ -437,15 +437,6 @@ footer {
   margin-right: auto;
   box-sizing: border-box;
 }
-/* --- Tighter vertical rhythm above activities --- */
-.hero,
-.tag,
-.features,
-.carousel-container {
-  margin-bottom: 0.5rem; /* was effectively much larger */
-}
-.feature img {
-  height: 60px;
-}
+
 
 
